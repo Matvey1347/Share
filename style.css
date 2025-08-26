@@ -1846,7 +1846,7 @@ html {
   }
 }
 
-@media (min-width: 767px) {
+/* @media (min-width: 767px) { */
   .bg {
     height: 110%;
     animation: bgAnim 5s ease-in-out infinite;
@@ -1861,4 +1861,4 @@ html {
       transform: translateY(0%);
     }
   }
-}
+/* } */

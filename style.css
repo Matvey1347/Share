@@ -1786,13 +1786,13 @@ html {
   z-index: 2;
   background-color: #f99d38;
   width: 115vw;
-  transform: rotate(-2.99deg) translate(-40%);
+  transform: rotate(-2.99deg) translate(-30%);
 }
 
 .str-2 {
   background-color: #171717;
   width: 115vw;
-  transform: rotate(3.24deg) translate(-40%);
+  transform: rotate(3.24deg) translate(-30%);
 }
 
 .str__row-marque {

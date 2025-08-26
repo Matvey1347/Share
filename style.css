@@ -1846,19 +1846,17 @@ html {
   }
 }
 
-/* @media (min-width: 767px) { */
-  .bg {
-    height: 110%;
-    animation: bgAnim 5s ease-in-out infinite;
-  }
+.bg {
+  height: 110%;
+  animation: bgAnim 5s ease-in-out infinite;
+}
 
-  @keyframes bgAnim {
-    0%,
-    100% {
-      transform: translateY(-0.5%);
-    }
-    50% {
-      transform: translateY(0%);
-    }
+@keyframes bgAnim {
+  0%,
+  100% {
+    transform: translateY(-0.5%);
   }
-/* } */
+  50% {
+    transform: translateY(0%);
+  }
+}

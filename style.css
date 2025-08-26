@@ -1846,16 +1846,19 @@ html {
   }
 }
 
-.bg {
-  animation: bgAnim 2.5s ease-in-out infinite;
-}
-
-@keyframes bgAnim {
-  0%,
-  100% {
-    transform: scale(1.05);
+@media (min-width: 767px) {
+  .bg {
+    height: 110%;
+    animation: bgAnim 5s ease-in-out infinite;
   }
-  50% {
-    transform: scale(1);
+
+  @keyframes bgAnim {
+    0%,
+    100% {
+      transform: translateY(-0.5%);
+    }
+    50% {
+      transform: translateY(0%);
+    }
   }
 }

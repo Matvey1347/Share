@@ -1847,7 +1847,7 @@ html {
 }
 
 .bg {
-  height: 110%;
+  height: 101%;
   animation: bgAnim 5s ease-in-out infinite;
 }
 

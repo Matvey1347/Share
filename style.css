@@ -86,6 +86,12 @@ html {
   margin: 0 auto;
 }
 
+@media (max-width: 450px) {
+  ._container {
+    padding: 0 20px;
+  }
+}
+
 .wrapper {
   position: relative;
   overflow: hidden;

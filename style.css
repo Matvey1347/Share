@@ -82,7 +82,7 @@ html {
 
 ._container {
   max-width: 1600px;
-  padding: 0 20px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -1210,7 +1210,8 @@ html {
 .key-features__item {
   position: relative;
   height: 464px;
-  min-width: 431px;
+  min-width: 400px;
+  width: 400px;
 }
 
 .key-features__item img {

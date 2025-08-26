@@ -268,6 +268,7 @@ html {
 }
 
 .use_cases button {
+  cursor: default !important;
   color: #fff;
   font-family: "TT Firs Neue";
   font-size: 14px;

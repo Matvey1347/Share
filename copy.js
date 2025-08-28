@@ -1,41 +1,38 @@
-const modal = document.querySelector(".copied_modal");
+const modal = document.querySelector('.copied_modal');
 
-const copies = document.querySelectorAll("[data-copy]");
+const copies = document.querySelectorAll('[data-copy]');
 copies.forEach((copy) => {
-   const clipboard = new ClipboardJS(copy, {
+  // copy.addEventListener('click', () => {
+    const clipboard = new ClipboardJS(copy, {
       text: function () {
-         // Получаем значение атрибута data-copy
-         const dataCopy = copy.getAttribute("data-copy");
+        // Получаем текст содержимого элемента
+        let text = copy.getAttribute("data-copy");
+        if (!text) {
+          text = copy.textContent.trim();
+        }
 
-         // Если data-copy имеет значение, копируем его
-         if (dataCopy) {
-            return dataCopy;
-         }
+        // Удаляем все <br> теги
+        text = text.replace(/<br\s*\/?>/gi, '');
 
-         // Если data-copy пустой, копируем содержимое элемента
-         let text = copy.textContent.trim();
+        return text;
+      }
+    });
 
-         // Удаляем все <br> теги
-         text = text.replace(/<br\s*\/?>/gi, "");
-
-         return text;
-      },
-   });
-
-   clipboard.on("success", function (e) {
-      console.log("Текст успешно скопирован: " + e.text);
+    clipboard.on('success', function (e) {
+      console.log('Текст успешно скопирован: ' + e.text);
       e.clearSelection();
 
       // Добавляем класс _show к модальному окну
-      modal.classList.add("_show");
+      modal.classList.add('_show');
 
       // Убираем класс _show через 2 секунды
       setTimeout(() => {
-         modal.classList.remove("_show");
+        modal.classList.remove('_show');
       }, 2000);
-   });
+    });
 
-   clipboard.on("error", function (e) {
-      console.error("Ошибка при копировании");
-   });
+    clipboard.on('error', function (e) {
+      console.error('Ошибка при копировании');
+    });
+  // });
 });
